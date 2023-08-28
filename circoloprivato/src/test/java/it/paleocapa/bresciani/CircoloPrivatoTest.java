@@ -13,39 +13,39 @@ public class CircoloPrivatoTest {
 
     @Test
     public void testAggiungiSocio() {
-        Socio socio1 = new Socio("Mario", "Rossi", 35, 'M');
+        Socio socio1 = new Socio("Nicola", "luchini", 35, 'M');
         circolo.aggiungiSocio(socio1);
         assertEquals(1, circolo.getSoci().size());
 
-        Socio socio2 = new Socio("Giulia", "Verdi", 40, 'F');
+        Socio socio2 = new Socio("federica", "bianchi", 40, 'F');
         circolo.aggiungiSocio(socio2);
         assertEquals(2, circolo.getSoci().size());
     }
 
     @Test
     public void testModificaSocio() {
-        Socio socio = new Socio("Mario", "Rossi", 35, 'M');
+        Socio socio = new Socio("Nicola", "luchini", 35, 'M');
         circolo.aggiungiSocio(socio);
-        assertEquals(35, circolo.getSoci().get("MarioRossi").getEta());
+        assertEquals(35, circolo.getSoci().get("Nicolaluchini").getEta());
 
-        circolo.modificaSocio("Mario", "Rossi", 36, 'M');
-        assertEquals(36, circolo.getSoci().get("MarioRossi").getEta());
+        circolo.modificaSocio("Nicola", "luchini", 36, 'M');
+        assertEquals(36, circolo.getSoci().get("Nicolaluchini").getEta());
     }
 
     @Test
     public void testRimuoviSocio() {
-        Socio socio = new Socio("Mario", "Rossi", 35, 'M');
+        Socio socio = new Socio("Nicola", "luchini", 35, 'M');
         circolo.aggiungiSocio(socio);
         assertEquals(1, circolo.getSoci().size());
 
-        circolo.rimuoviSocio("Mario", "Rossi");
+        circolo.rimuoviSocio("Nicola", "luchini");
         assertEquals(0, circolo.getSoci().size());
     }
 
     @Test
     public void testCalcolaEtaMedia() {
-        Socio socio1 = new Socio("Mario", "Rossi", 35, 'M');
-        Socio socio2 = new Socio("Giulia", "Verdi", 40, 'F');
+        Socio socio1 = new Socio("Nicola", "luchini", 35, 'M');
+        Socio socio2 = new Socio("federica", "bianchi", 40, 'F');
 
         circolo.aggiungiSocio(socio1);
         circolo.aggiungiSocio(socio2);
@@ -56,9 +56,9 @@ public class CircoloPrivatoTest {
 
     @Test
     public void testCalcolaEtaMediaSesso() {
-        Socio socio1 = new Socio("Mario", "Rossi", 35, 'M');
-        Socio socio2 = new Socio("Giulia", "Verdi", 40, 'F');
-        Socio socio3 = new Socio("Luca", "Bianchi", 25, 'M');
+        Socio socio1 = new Socio("Nicola", "luchini", 35, 'M');
+        Socio socio2 = new Socio("federica", "bianchi", 40, 'F');
+        Socio socio3 = new Socio("Bianchi", "Luca", 25, 'M');
 
         circolo.aggiungiSocio(socio1);
         circolo.aggiungiSocio(socio2);
@@ -73,9 +73,9 @@ public class CircoloPrivatoTest {
 
     @Test
     public void testCalcolaDistribuzionePercentualeSesso() {
-        Socio socio1 = new Socio("Mario", "Rossi", 35, 'M');
-        Socio socio2 = new Socio("Giulia", "Verdi", 40, 'F');
-        Socio socio3 = new Socio("Luca", "Bianchi", 25, 'M');
+        Socio socio1 = new Socio("Nicola", "luchini", 35, 'M');
+        Socio socio2 = new Socio("federica", "bianchi", 40, 'F');
+        Socio socio3 = new Socio("Bianchi", "Luca", 25, 'M');
 
         circolo.aggiungiSocio(socio1);
         circolo.aggiungiSocio(socio2);
